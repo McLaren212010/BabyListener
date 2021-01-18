@@ -47,7 +47,7 @@ class Register : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(Email.text.toString(), password.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this,LoginActivity::class.java))
+                    startActivity(Intent(this,MainActivity::class.java))
                     finish()
                 } else {
                     Toast.makeText(baseContext, "Sign Up failed. Try again after some time.",
@@ -59,7 +59,7 @@ class Register : AppCompatActivity() {
     }
 
     fun click_login(view: View) {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
