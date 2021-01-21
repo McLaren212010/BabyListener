@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?){
         if(currentUser != null) {
-            startActivity(Intent(this, DashboardActivity::class.java))
+            startActivity(Intent(this, SendNotif::class.java))
             finish()
         }else {
             Toast.makeText(
